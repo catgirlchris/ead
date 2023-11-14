@@ -2,7 +2,7 @@
     'name': "SGE03_2",
     'version': '15.0.0.1',
     'depends': ['base', 'project'],
-    'author': "Openred",
+    'author': "Chris",
     'category': "Sales",
     'description': """
         SGE03_2
