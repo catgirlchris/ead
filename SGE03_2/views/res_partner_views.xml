@@ -4,16 +4,17 @@
         <field name="name">TreeFEGO</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">res.partner</field>
-        <field name="view_mode">list,tree,kanban,form</field>
+        <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 ¡Crea una nueva empresa!
             </p>
         </field>
     </record>
-    <record id="formFEGO_form" model="ir.ui.view">
+    <record id="view_partner_form" model="ir.ui.view">
         <field name="name">sge03_2.form</field>
         <field name="model">res.partner</field>
+        <field name="priority">1</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
@@ -30,14 +31,8 @@
     </record>
     <record id="formFEGO_action" model="ir.actions.act_window">
         <field name="name">FormFEGO</field>
-        <field name="type">ir.actions.act_window</field>
         <field name="res_model">res.partner</field>
-        <field name="view_mode">form,tree</field>
-        <field name="help" type="html">
-            <p class="o_view_nocontent_smiling_face">
-                ¡Crea una nueva empresa!
-            </p>
-        </field>
+        <field name="view_mode">form</field>
     </record>
     
     <!-- MENU PARENT -->
