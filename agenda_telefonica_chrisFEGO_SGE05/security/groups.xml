@@ -1,0 +1,10 @@
+<!-- Nota: este grupo no es usado en mi módulo. -->
+<!--       He puesto que el acceso al modulo en ir.model.access.csv sea para todos los usuarios. -->
+<!-- Si quisiese que pertenezca solo a un grupo escribo el id del grupo en la columna que dejé vacía. -->
+<!-- access_agenda_telefonica,access.agenda.telefonica,model_agenda_telefonica,agenda_telefonica_group,1,1,1,1 -->
+<odoo>
+    <record id="agenda_telefonica_group" model="res.groups">
+        <field name="name">Agenda Telefonica</field>
+        <field name="users" eval="[(4, ref('base.group_user'))]" />
+    </record>
+</odoo>
