@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_lectura,access.lectura,model_hoja_lectura,,1,1,1,1
+access_linea_hoja_lectura,access.linea.hoja.lectura,model_linea_hoja_lectura,,1,1,1,1
+access_zona_trabajo,access.zona.trabajo,model_zona_trabajo,,1,1,1,1
+access_cortes_variaciones,access.cortes.variaciones,model_lecturas_cortes_variaciones,,1,1,1,1
+access_listado_lecturas_wizard,access.listado.lecturas.wizard,model_lecturas_listado_lecturas_wizard,,1,1,1,1

@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <!-- parent menu -->
+        <menuitem name="Vivero" id="vivero_menu" sequence="20" action="vivero_pedidos_act_window"/>
+        
+        <menuitem name="Planta"   id="vivero_planta_menu" parent="vivero_menu" sequence="10" action="vivero_planta_act_window"/>
+        <menuitem name="Pedido"   id="vivero_pedido_menu" parent="vivero_menu" sequence="30" action="vivero_pedido_act_window"/>
+        <menuitem name="Clientes" id="vivero_cliente_menu" parent="vivero_menu" sequence="50" action="vivero_cliente_act_window"/>
+    </data>
+</odoo>

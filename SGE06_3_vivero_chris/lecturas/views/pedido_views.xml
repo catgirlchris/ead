@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hoja_lectura_form_view" model="ir.ui.view">
+            <field name="name">lecturas.hoja_lectura.form</field>
+            <field name="model">hoja.lectura</field>
+            <field name="arch" type="xml">
+                <form string="Lecturas">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" options="{'no_create': True, 'no_create_edit':True}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field colspan="2" name="linea_hoja_lectura_ids"  nolabel="1">
+                                <tree editable="bottom" >
+                                    <field name="sequence_number"/>
+                                    <field name="date"/>
+                                    <field name="zona_id"/>
+                                    <field name="bm"/>
+                                    <field name="lote"/>
+                                    <field name="t_lote" sum="T. Lote" decoration-danger="t_lote != (leidas + cerrado + ausente)"/>
+                                    <field name="leidas" sum="Leidas"/>
+                                    <field name="cerrado" sum="Cerradas"/>
+                                    <field name="ausente" sum="Ausentes"/>
+                                    <field name="km_realizado" sum="KM realizados"/>
+                                    <field name="km_salida"/>
+                                    <field name="km_entrada"/>
+
+                                </tree>
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="date"/>
+                                            <field name="zona_id"/>
+                                            <field name="bm"/>
+                                            <field name="lote"/>
+                                            <field name="t_lote"/>
+                                        </group>
+                                        <group>
+                                            <field name="leidas"/>
+                                            <field name="cerrado"/>
+                                            <field name="ausente"/>
+                                            <field name="km_realizado"/>
+                                            <field name="km_salida"/>
+                                            <field name="km_entrada"/>
+                                        </group>
+                                    </group>
+                                </form>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="hoja_lectura_tree_view" model="ir.ui.view">
+            <field name="name">lecturas.hoja_lectura.tree</field>
+            <field name="model">hoja.lectura</field>
+            <field name="arch" type="xml">
+                <tree string="Lecturas">
+                    <field name="numero" width="10%"/>
+                    <field name="name" width="50%"/>
+                    <field name="create_date" string="Fecha de creación" width="40%"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hoja_lectura_search_view" model="ir.ui.view">
+            <field name="name">lecturas.hoja_lectura.search</field>
+            <field name="model">hoja.lectura</field>
+            <field name="arch" type="xml">
+                <search string="Lecturas">
+                    <field name="name"/>
+                    <field name="numero"/>
+                    <group expand="1" string="Filtros">
+                        <filter string="Creado hoy" name="create_date" domain="[('create_date', '&gt;=', datetime.datetime.now().strftime('%Y-%m-%d 00:00:00')), ('create_date', '&lt;=', datetime.datetime.now().strftime('%Y-%m-%d 23:59:59'))]"/>
+                        <!-- <filter string="Hoy" domain="[('create_date', '&gt;=', datetime.datetime.now().strftime('%Y-%m-%d 00:00:00')),('create_date', '&lt;=',datetime.datetime.now().strftime('%Y-%m-%d 23:23:59'))]"/> -->
+                    </group>
+                    <group expand="1" string="Group By">
+                        <filter string="Empleado" name="name" domain="[('name', '=', True)]"
+                                context="{'group_by':'name'}"/>
+                        <filter string="Fecha de creación" name="create_date"
+                                context="{'group_by':'create_date'}"/>
+                        <filter string="N.º" name="numero"
+                                context="{'group_by':'numero'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="hoja_lectura_act_window" model="ir.actions.act_window">
+            <field name="name">Lecturas</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hoja.lectura</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    There is no examples click here to add new Lecturas.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
