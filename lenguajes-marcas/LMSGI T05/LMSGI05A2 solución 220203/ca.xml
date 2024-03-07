@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="LMSGI5A2.xsl"?>
+<ca>
+	<productos>
+		<producto id="P001" nombre="Pimiento"></producto>
+		<producto id="P002" nombre="Tomate"></producto>
+	</productos>
+	<socios>
+		<socio id="S001" nombre="Juan Madrid"></socio>
+		<socio id="S002" nombre="Manuel Esteban"></socio>
+		<socio id="S003" nombre="Carmen Solano"></socio>
+		<socio id="S004" nombre="Carlos Vicente"></socio>
+		<socio id="S005" nombre="Clara Ardieta"></socio>
+	</socios>
+	<entradas>
+		<entrada id="E000001" fecha="2018-10-01" producto="P002" socio="S003" cantidad="12000"></entrada>
+		<entrada id="E000002" fecha="2018-10-01" producto="P001" socio="S004" cantidad="14000"></entrada>
+		<entrada id="E000003" fecha="2018-10-01" producto="P001" socio="S001" cantidad="11000"></entrada>
+		<entrada id="E000004" fecha="2018-10-02" producto="P002" socio="S005" cantidad="18000"></entrada>
+		<entrada id="E000005" fecha="2018-10-02" producto="P002" socio="S001" cantidad="12000"></entrada>
+		<entrada id="E000006" fecha="2018-10-02" producto="P002" socio="S002" cantidad="15000"></entrada>
+		<entrada id="E000007" fecha="2018-10-02" producto="P001" socio="S005" cantidad="18000"></entrada>
+		<entrada id="E000008" fecha="2018-10-03" producto="P001" socio="S003" cantidad="10000"></entrada>
+		<entrada id="E000009" fecha="2018-10-03" producto="P002" socio="S002" cantidad="13000"></entrada>
+		<entrada id="E000010" fecha="2018-10-03" producto="P002" socio="S005" cantidad="17000"></entrada>
+		<entrada id="E000011" fecha="2018-10-04" producto="P002" socio="S002" cantidad="11000"></entrada>
+		<entrada id="E000012" fecha="2018-10-04" producto="P001" socio="S001" cantidad="16000"></entrada>
+		<entrada id="E000013" fecha="2018-10-04" producto="P002" socio="S003" cantidad="19000"></entrada>
+		<entrada id="E000014" fecha="2018-10-04" producto="P001" socio="S004" cantidad="12000"></entrada>
+		<entrada id="E000015" fecha="2018-10-05" producto="P001" socio="S002" cantidad="17000"></entrada>
+		<entrada id="E000016" fecha="2018-10-05" producto="P001" socio="S001" cantidad="13000"></entrada>
+		<entrada id="E000017" fecha="2018-10-05" producto="P002" socio="S005" cantidad="10000"></entrada>
+		<entrada id="E000018" fecha="2018-10-06" producto="P002" socio="S003" cantidad="11000"></entrada>
+		<entrada id="E000019" fecha="2018-10-06" producto="P001" socio="S001" cantidad="17000"></entrada>
+	</entradas>
+</ca>

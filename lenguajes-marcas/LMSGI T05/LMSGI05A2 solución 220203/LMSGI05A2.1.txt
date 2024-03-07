@@ -1,0 +1,15 @@
+1.
+
+/ca/socios/socio/@nombre/data()
+
+2.
+
+/ca/entradas/entrada[@fecha="2018-10-02"]/@producto/data()
+
+3.
+
+/ca/entradas/entrada[@producto="P002" and @socio="S003"]/@cantidad/data()
+
+4.
+
+/ca/entradas/entrada[@fecha="2018-10-04" and @cantidad>15000]/@socio/data()
