@@ -1,10 +1,10 @@
 {
     'name': 'SGE06_3 Vivero Chris',
-    'version': '16.0.0.1',
+    'version': '15.0.0.1',
     'summary': '',
     'description': '',
     'category': 'Tools',
-    'author': 'Openred Soluciones S.L',
+    'author': 'Chris Fernández Gómez',
     'website': 'www.openred.es',
     'license': 'LGPL-3',
     'depends': ['base'],
