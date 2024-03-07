@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rfmvb_resultado fecha="2023-12-28T21:52:00" categoria="infantil" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="fernandez_gomez_chris_LMSGI04.xsd" >
+	<sede nombre="Pabellón Municipal de Perín" localidad="Cartagena" cp="30396" convocado="2023-12-28T20:00:00" />
+	<arbitros>
+        <arbitro id="A1" rol="silla" colegiado="C7568" nombre="Martínez Fernández, Roberto" />
+        <arbitro id="A2" rol="auxiliar" colegiado="C2654" nombre="Alcaraz Valverde, Rocío" />
+        <arbitro id="A3" rol="mesa" nombre="Portero Mondéjar, Nuria" />
+        <arbitro id="A4" rol="mesa" nombre="Solano Méndez, Pedro" />
+    </arbitros>
+    <equipo rol="local" nombre="Perineros VC" procedencia="Perín" localidad="Cartagena">
+		<entrena id="EL01" nombre="García Ortega, Carmen" email="carmen.garcia@rfmvb.c3" movil="655789789" />
+		<entrena id="EL02" nombre="Conesa Salmerón, Luis" email="luis.conesa@rfmvb.c3" movil="655246246" />
+		<dorsal numero="DL01" nombre="Noguera Carrillo, David" nacimiento="2011-03-15" titular="true" capitan="true" />
+		<dorsal numero="DL02" nombre="Castillo Cervantes, Noelia" nacimiento="2011-08-12" titular="true" />
+		<dorsal numero="DL03" nombre="Rosique Palazón, Gabriel" nacimiento="2011-02-14" titular="true" />
+		<dorsal numero="DL04" nombre="Ardieta Guillén, Aurora" nacimiento="2010-05-17" titular="true" libero="true"/>
+		<dorsal numero="DL11" nombre="Ardieta Guillén, Aurora" nacimiento="2010-05-17" titular="true" libero="true"/>
+		<dorsal numero="DL05" nombre="Belmonte Villar, Cosme" nacimiento="2011-01-03" titular="true" />
+		<dorsal numero="DL06" nombre="Roca Lorca, Esperanza" nacimiento="2011-10-11" titular="true" />
+		<dorsal numero="DL07" nombre="Gómez Ardil, Fernando" nacimiento="2010-04-09" />
+		<dorsal numero="DL08" nombre="Teruel Siles, Amparo" nacimiento="2011-07-23" />
+		<dorsal numero="DL09" nombre="Martínez Norte, Salvador" nacimiento="2010-12-20" />
+		<dorsal numero="DL10" nombre="Navarro Esteban, Silvia" nacimiento="2011-09-30" />
+	</equipo>
+	<equipo rol="visitante" nombre="Derroche Voley" procedencia="Roche" localidad="Cartagena">
+		<entrena id="EV01" nombre="Solano Jiménez, Pablo" email="pablo.solano@rfmvb.c3" movil="655458458" />
+		<entrena id="EV02" nombre="Hernández López, Isabel" email="isabel.hernandez@rfmvb.c3" movil="655123123" />
+		<dorsal numero="DV01" nombre="Carrasco Salcedo, Alicia" nacimiento="2011-03-29" titular="true" capitan="true" />
+		<dorsal numero="DV02" nombre="Benavides Pérez, Ricardo" nacimiento="2011-11-30" titular="true" />
+		<dorsal numero="DV03" nombre="Moya Fernández, Carla" nacimiento="2010-08-12" titular="true" libero="true" />
+		<dorsal numero="DV04" nombre="Paredes Roque, Manuel" nacimiento="2011-05-23" titular="true" />
+		<dorsal numero="DV05" nombre="Zambrano Peláez, María" nacimiento="2011-02-05" titular="true" />
+		<dorsal numero="DV06" nombre="Ródenas Aparicio, Samuel" nacimiento="2011-10-06" titular="true" />
+		<dorsal numero="DV07" nombre="Linares Montiel, Alba" nacimiento="2011-01-30" />
+		<dorsal numero="DV08" nombre="Méndez López, Mario" nacimiento="2010-04-12" />
+		<dorsal numero="DV09" nombre="Torres Vera, Aitana" nacimiento="2010-09-07" />
+		<dorsal numero="DV10" nombre="Sánchez Sánchez, Manuel" nacimiento="2011-06-24" />
+	</equipo>
+	<sets local="3" visitante="1">
+		<set numero="ST1" local="25" visitante="18" inicio="20:03:00" fin="20:31:00">
+			<cambio sale="DL02" entra="DL09" hora="20:19:00" />
+			<tiempo solicita="local" hora="20:15:00" />
+			<tiempo solicita="visitante" hora="20:26:00" />
+			<anota autor="A2" hora="20:30:00">
+                Doral local 3 amonestado por mal comportamiento.
+            </anota>
+		</set>
+		<set numero="ST2" local="26" visitante="28" inicio="20:34:00" fin="21:17:00">
+			<cambio sale="DV04" entra="DV08" hora="21:02:00" />
+			<cambio sale="DV03" entra="DV10" hora="21:02:00" />
+			<tiempo solicita="local" hora="21:09:00" />
+			<anota autor="A1" hora="20:41:00">
+                Juego detenido 4 minutos para secar líquido derramado.
+            </anota>
+		</set>
+		<set numero="ST3" local="25" visitante="12" inicio="21:22:00" fin="21:41:00">
+			<cambio sale="DL01" entra="DL08" hora="21:28:00" />
+			<tiempo solicita="local" hora="21:25:00" />
+			<tiempo solicita="visitante" hora="21:38:00" />
+		</set>
+		<set numero="ST4" local="25" visitante="21" inicio="21:43:00" fin="22:08:00">
+			<cambio sale="DV02" entra="DV07" hora="22:01:00" />
+			<tiempo solicita="visitante" hora="21:58:00" />
+			<anota autor="A4" hora="21:42:00">
+                Equipo local queda sin entrenador titular por indisposición, asume el rol el segundo entrenador.
+            </anota>
+			<anota autor="A4" hora="21:45:00">
+                Entrenador visitante quiere reflejar en acta que no se ha dejado suficiente descanso entre sets 3 y 4.
+            </anota>
+		</set>
+		<observaciones>
+			skdjfñlaskdjflñkj
+		</observaciones>
+	</sets>
+</rfmvb_resultado>

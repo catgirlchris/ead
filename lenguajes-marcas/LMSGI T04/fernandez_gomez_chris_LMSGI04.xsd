@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="rfmvb_resultado">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="sede" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:attribute name="nombre" use="required" />
+						<xs:attribute name="localidad" use="required" />
+						<xs:attribute name="cp" type="xs:integer" use="required" />
+						<xs:attribute name="convocado" type="xs:dateTime" use="required" />
+						<xs:attribute name="inicio" type="xs:dateTime" use="optional" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="arbitros" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="arbitro" minOccurs="1" maxOccurs="4">
+								<xs:complexType>
+									<xs:attribute name="id" use="required"  type="xs:ID" />
+									<xs:attribute name="rol" use="required" >
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="silla"/>
+												<xs:enumeration value="auxiliar"/>
+												<xs:enumeration value="mesa"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="colegiado" type="xs:NCName" use="optional"/>
+									<xs:attribute name="nombre" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="equipo" minOccurs="2" maxOccurs="2">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="entrena" minOccurs="1" maxOccurs="2">
+								<xs:complexType>
+									<xs:attribute name="id" use="required" type="xs:ID" />
+									<xs:attribute name="nombre" use="required" />
+									<xs:attribute name="email" use="required" />
+									<xs:attribute name="movil" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="dorsal" minOccurs="1" maxOccurs="12">
+								<xs:complexType>
+									<xs:attribute name="numero" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:ID">
+												<xs:pattern value="D(L|V)([0-9][1-9]|[1-9][0-9])"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="nombre" use="required" />
+									<xs:attribute name="nacimiento" type="xs:date" use="required" />
+									<xs:attribute name="titular" type="xs:boolean" use="optional" fixed="true" />
+									<xs:attribute name="capitan" type="xs:boolean" use="optional" fixed="true" />
+									<xs:attribute name="libero" type="xs:boolean" use="optional" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="rol" use="required" >
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="local"/>
+									<xs:enumeration value="visitante"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="nombre" use="required" />
+						<xs:attribute name="procedencia" use="required" />
+						<xs:attribute name="localidad" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="sets" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="set" minOccurs="0" maxOccurs="5">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="cambio" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="sale" use="required" type="xs:IDREF" />
+												<xs:attribute name="entra" use="required" type="xs:IDREF" />
+												<xs:attribute name="hora" use="required" type="xs:time" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="tiempo" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="solicita" use="required" />
+												<xs:attribute name="hora" use="required" type="xs:time" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="anota" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType mixed="true">
+												<xs:attribute name="autor" use="required" type="xs:IDREF" />
+												<xs:attribute name="hora" use="required" type="xs:time" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="numero" use="required" />
+									<xs:attribute name="local" type="xs:integer" use="required" />
+									<xs:attribute name="visitante" type="xs:integer" use="required" />
+									<xs:attribute name="inicio" use="required" type="xs:time" />
+									<xs:attribute name="fin" use="required" type="xs:time" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="observaciones" minOccurs="0" maxOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="10000"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="local" type="xs:integer" use="required" />
+						<xs:attribute name="visitante" type="xs:integer" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="fecha" type="xs:dateTime" use="required" />
+			<xs:attribute name="categoria" use="optional" default="absoluta"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

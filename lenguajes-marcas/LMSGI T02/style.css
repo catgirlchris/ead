@@ -1,0 +1,62 @@
+header {
+    
+}
+
+.headerimg {
+    height: 20vw;
+    max-height: 200px;
+    
+}
+
+body {background-color: grey;}
+
+.menu_item {
+    background-color: rgba(144,218,253,255);
+    min-width: 256px;
+    min-height: 64px;
+    max-width: 90%;
+    border-radius: 25px;
+    text-decoration: none;
+    color: black;
+    margin: 0.3em;
+    align-items: center;
+}
+
+.menu {
+    background-color: rgba(10,130,216,255);
+    border-radius: 25px;
+    padding: 0.5em;
+}
+
+.icon_container {
+    padding: 0.3em;
+    background-color: white;
+    border-radius: 25px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.icon {
+    width: 32px;
+}
+
+.white-font {color: white;}
+
+.flxrow {
+    display: flex;
+    flex-direction: row;
+}
+
+.flxgrow2 {
+    flex-grow: 20;
+}
+
+.flxgrow1 {
+    flex-grow: 1;
+}
+
+#top {
+    background-color: rgba(228,140,53,255);
+    color: white;
+}

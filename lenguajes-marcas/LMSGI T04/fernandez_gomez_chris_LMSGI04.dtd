@@ -1,0 +1,66 @@
+<!ELEMENT rfmvb_resultado (sede,arbitros,equipo,equipo,sets)>
+<!ATTLIST rfmvb_resultado fecha CDATA #REQUIRED>
+<!ATTLIST rfmvb_resultado categoria CDATA #IMPLIED>
+
+<!ELEMENT sede EMPTY>
+<!ATTLIST sede nombre CDATA #REQUIRED>
+<!ATTLIST sede localidad CDATA #REQUIRED>
+<!ATTLIST sede cp CDATA #REQUIRED>
+<!ATTLIST sede convocado CDATA #REQUIRED>
+<!ATTLIST sede inicio CDATA #IMPLIED>
+
+<!ELEMENT arbitros (arbitro+)>
+
+<!ELEMENT arbitro EMPTY>
+<!ATTLIST arbitro id ID #REQUIRED>
+<!ATTLIST arbitro rol (silla|auxiliar|mesa) #REQUIRED>
+<!ATTLIST arbitro colegiado NMTOKEN #IMPLIED>
+<!ATTLIST arbitro nombre CDATA #REQUIRED>
+
+
+<!ELEMENT equipo ((entrena,entrena?),dorsal+)>
+<!ATTLIST equipo rol (local|visitante) #REQUIRED>
+<!ATTLIST equipo nombre CDATA #REQUIRED>
+<!ATTLIST equipo procedencia CDATA #REQUIRED>
+<!ATTLIST equipo localidad CDATA #REQUIRED>
+
+<!ELEMENT entrena EMPTY>
+<!ATTLIST entrena id ID #REQUIRED>
+<!ATTLIST entrena nombre CDATA #REQUIRED>
+<!ATTLIST entrena email CDATA #REQUIRED>
+<!ATTLIST entrena movil CDATA #REQUIRED>
+
+<!ELEMENT dorsal EMPTY>
+<!ATTLIST dorsal numero ID #REQUIRED>
+<!ATTLIST dorsal nombre CDATA #REQUIRED>
+<!ATTLIST dorsal nacimiento CDATA #REQUIRED>
+<!ATTLIST dorsal titular (true) #IMPLIED>
+<!ATTLIST dorsal capitan (true) #IMPLIED>
+<!ATTLIST dorsal libero (true) #IMPLIED>
+
+
+<!ELEMENT sets (set*,observaciones?)>
+<!ATTLIST sets local CDATA #REQUIRED>
+<!ATTLIST sets visitante CDATA #REQUIRED>
+
+<!ELEMENT set (cambio*,tiempo*,anota*)>
+<!ATTLIST set numero ID #REQUIRED>
+<!ATTLIST set local CDATA #REQUIRED>
+<!ATTLIST set visitante CDATA #REQUIRED>
+<!ATTLIST set inicio CDATA #REQUIRED>
+<!ATTLIST set fin CDATA #REQUIRED>
+
+<!ELEMENT cambio EMPTY>
+<!ATTLIST cambio sale IDREF #REQUIRED>
+<!ATTLIST cambio entra IDREF #REQUIRED>
+<!ATTLIST cambio hora CDATA #REQUIRED>
+<!ELEMENT tiempo EMPTY>
+
+<!ATTLIST tiempo solicita CDATA #REQUIRED>
+<!ATTLIST tiempo hora CDATA #REQUIRED>
+
+<!ELEMENT anota (#PCDATA)>
+<!ATTLIST anota autor IDREF #REQUIRED>
+<!ATTLIST anota hora CDATA #REQUIRED>
+
+<!ELEMENT observaciones (#PCDATA)>

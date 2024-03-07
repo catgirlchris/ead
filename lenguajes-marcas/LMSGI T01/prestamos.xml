@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prestamos>
+    <tipos>
+        <tipo id="PERS" nombre="Personal">
+            <subtipo id="PERS_FIJO" nombre="Fijo"/>
+            <subtipo id="PERS_VARI" nombre="Variable"/>
+        </tipo>
+        <tipo id="HIPO" nombre="Hipotecario">
+            <subtipo id="HIPO_FIJO" nombre="Fijo"/>
+            <subtipo id="HIPO_VARI" nombre="Variable"/>
+            <subtipo id="HIPO_MIXT" nombre="Mixto"/>
+        </tipo>
+        <tipo id="RAPI" nombre="Rápido">
+            <subtipo id="RAPI_FIJO" nombre="Fijo"/>
+            <subtipo id="RAPI_VARI" nombre="Variable"/>
+        </tipo>
+    </tipos>
+    <entidades>
+        <entidad id="CXA" nombre="Caixa" tipo="Banco">
+            <grupo_productos>
+                <producto id="RAPI_CAIXA" ref_tipo="RAPI" nombre="Prest. Rápido Caixa" plazo_minimo="12" plazo_maximo="12" tiempo_plazo="meses" importe_minimo="5000" importe_maximo="500000" comision_apertura="5">
+                    <plazos>
+                        <plazo cantidad="3" ref_subtipo="RAPI_FIJO" referencia_porcentaje="FIJO" interes="4.0"/>
+                        <plazo cantidad="9" ref_subtipo="RAPI_VARI" referencia_porcentaje="EURIBOR" interes="2.5"/>
+                    </plazos>
+                </producto>
+                <producto id="HIPO_CAIXA" ref_tipo="HIPO" nombre="Prest. Rápido Caixa" plazo_minimo="12" plazo_maximo="24" tiempo_plazo="años" importe_minimo="200000" importe_maximo="1000000">
+                    <plazos>
+                        <!-- He decidido usar 0 como "restante" y que la aplicación calcule según el plazo maximo. -->
+                        <!-- cant_restante=plazo_maximo - suma_plazos -->
+                        <plazo cantidad="6" ref_subtipo="HIPO_VARI" referencia_porcentaje="EURIBOR" interes="6.0"/>
+                        <plazo cantidad="3" ref_subtipo="HIPO_VARI" referencia_porcentaje="EURIBOR" interes="3.5"/>
+                        <plazo cantidad="0" ref_subtipo="HIPO_VARI" referencia_porcentaje="EURIBOR" interes="3.5"/>
+                    </plazos>
+                </producto>
+            </grupo_productos>
+        </entidad>
+        <entidad id="IMG" nombre="Imagin" tipo="Banco">
+            <producto id="RAPI_BAI" ref_tipo="RAPI" nombre="Prest. Rápido Caixa" plazo_minimo="12" plazo_maximo="36" tiempo_plazo="meses" importe_minimo="3000" importe_maximo="250000" comision_cancelacion="5">
+                <plazos>
+                    <plazo cantidad="9" ref_subtipo="RAPI_FIJO" referencia_porcentaje="FIJO" interes="6.0"/>
+                    <plazo cantidad="3" ref_subtipo="RAPI_VARI" referencia_porcentaje="EURIBOR" interes="4.5"/>
+                    <plazo cantidad="0" ref_subtipo="RAPI_VARI" referencia_porcentaje="EURIBOR" interes="2.5"/>
+                </plazos>
+            </producto>
+        </entidad>
+        <entidad id="SNT" nombre="Santander" tipo="Credito">
+        </entidad>
+        <entidad id="AXO" nombre="Axolote" tipo="Otro">
+        </entidad>
+    </entidades>
+    <!-- Este campo con fines informativos para mostrar prefiero ponerlo a parte con una referencia al producto. -->
+    <!-- No veo mal tener un tag descripcion de texto variable dentro del producto pero siento que esto es más accesible
+          y ajustable en caso de que se quiera añadir la información después de la creación. Acepto opiniones jeje. -->
+    <informacion_extra>
+        <informacion ref_producto="RAPI_CAIXA">El importe depende del importe solicitado y tendrá un máximo y un mínimo.</informacion>
+        <informacion ref_producto="HIPO_CAIXA">¡Aceptamos importes de muy amplia cantidad para todas tus necesidades!</informacion>
+    </informacion_extra>
+</prestamos>

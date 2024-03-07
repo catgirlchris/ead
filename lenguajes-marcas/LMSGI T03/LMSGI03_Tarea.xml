@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Últimas ofertas de inmuebles</title>
+		<link>http://www.inmovimiento.com</link>
+		<description>
+			Este canal publica ofertas destacadas sobre viviendas en venta o alquiler.
+		</description>
+		<language>es-ES</language>
+		
+		<item>
+			<title>Ofertas pisos en alquiler y venta, Mula</title>
+			<link>http://www.inmovimiento.com/ofertas/pisos</link>
+			<guid>http://www.inmovimiento.com/ofertas/pisos</guid>
+			<description>
+				Venta en calle 1123123.
+				Pisito acogedor 100.000€.
+  
+				Alquiler en calle 11asfd23123.
+				Pisito acogedor 500€ al mes y dos meses de fianza.
+			</description>
+			<pubDate>Fri, 08 Dec 2023 07:00:00 GMT</pubDate>
+		</item>
+
+		<item>
+			<title>Ofertas garajes en alquiler y venta, Mula</title>
+			<link>http://www.inmovimiento.com/ofertas/garajes</link>
+			<guid>http://www.inmovimiento.com/ofertas/garajes</guid>
+			<description>
+				Venta en calle 1123123.
+				Garaje acogedor 20.000€.
+
+				Alquiler en calle 11asfd23123.
+				Garaje acogedor 150€ al mes y dos meses de fianza.
+			</description>
+			<pubDate>Fri, 08 Dec 2023 08:00:00 GMT</pubDate>
+		</item>
+
+		<item>
+			<title>Ofertas casas en alquiler y venta, Mula</title>
+			<link>http://www.inmovimiento.com/ofertas/casas</link>
+			<guid>http://www.inmovimiento.com/ofertas/casas</guid>
+			<description>
+				Venta en calle 1123123.
+				Casa acogedora 250.000€.
+
+				Alquiler en calle 11asfd23123.
+				Casa acogedora 650€ al mes y dos meses de fianza.
+			</description>
+			<pubDate>Fri, 08 Dec 2023 09:00:00 GMT</pubDate>
+		</item>
+
+		<item>
+			<title>Ofertas oficinas en alquiler y venta, Mula</title>
+			<link>http://www.inmovimiento.com/ofertas/oficinas</link>
+			<guid>http://www.inmovimiento.com/ofertas/oficinas</guid>
+			<description>
+				Venta en calle 1123123.
+				Oficina acogedora 20.000€.
+
+				Alquiler en calle 11asfd23123.
+				Pisito acogedor 150€ al mes y dos meses de fianza.
+			</description>
+			<pubDate>Fri, 08 Dec 2023 10:00:00 GMT</pubDate>
+		</item>
+		
+		<item>
+			<title>Ofertas terrenos en venta, Mula</title>
+			<link>http://www.inmovimiento.com/ofertas/terrenos</link>
+			<guid>http://www.inmovimiento.com/ofertas/terrenos</guid>
+			<description>
+				Venta en calle 1123123.
+				Terreno acogedor 20.000€..
+			</description>
+			<pubDate>Fri, 08 Dec 2023 11:00:00 GMT</pubDate>
+		</item>
+		
+	</channel>
+</rss>
