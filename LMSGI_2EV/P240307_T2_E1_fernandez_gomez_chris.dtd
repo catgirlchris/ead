@@ -1,0 +1,23 @@
+a)
+<!ELEMENT pruebas_aptitud (pruebas, aspirantes, resultados?)>
+
+b)
+<!ELEMENT pruebas (prueba+)>
+
+c) TODO ver opcioanl
+<!ELEMENT aspirante EMPTY>
+<!ATTLIST aspirante nombre CDATA #REQUIRED>
+<!ATTLIST aspirante telefono CDATA #OPTIONAL>
+
+d)
+<!ELEMENT prueba EMPTY>
+<!ATTLIST prueba id ID #REQUIRED>
+<!ELEMENT resultado EMPTY>
+<!ATTLIST resultado prueba_id IDREF #REQUIRED>
+
+e)
+<!ELEMENT resultados (resultado*, incidencias?)>
+
+f)
+<!ELEMENT observaciones (#PCDATA)>
+<!ELEMENT prueba EMPTY>

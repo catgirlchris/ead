@@ -1,0 +1,43 @@
+a)
+<xs:element name="nombre" minOccurs="0" maxOccurs="1">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+b)
+<xs:element name="pruebas_aptitud">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="pruebas" minOccurs="1" maxOccurs="1"></xs:element>
+            <xs:element name="aspirantes" minOccurs="1" maxOccurs="1"></xs:element>
+            <xs:element name="resultados" minOccurs="0" maxOccurs="1"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+c)
+<xs:complexType>
+    <xs:attribute name="prueba_id" use="required" type="xs:IDREF" />
+    <xs:attribute name="aspirante_dni" use="required"/>
+    <xs:attribute name="valor" use="optional" type="xs:integer"/>
+    <xs:attribute name="realiza" use="optional" type="xs:time" />
+</xs:complexType>
+
+d)
+<xs:element name="resultados">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="resultado" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="observaciones" minOccurs="0" maxOccurs="3"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="incidencias" minOccurs="0" maxOccurs="1"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>

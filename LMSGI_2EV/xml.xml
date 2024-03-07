@@ -1,0 +1,37 @@
+<?xml-stylesheet type="text/xsl" href="P240307_T2_E3_fernandez_gomez_chris.xsl"?>
+<pruebas_aptitud>
+    <pruebas>
+        <prueba id="FDB" nombre="Flexiones de brazos" valor_min="20" unidad="repeticiones" />
+        <prueba id="C15" nombre="Carrera de 1500 metros" valor_max="400" unidad="segundos" />
+        <prueba id="SVE" nombre="Salto vertical" valor_min="50" unidad="centímetros" />
+        <prueba id="EST" nombre="Estatura" valor_min="160" unidad="centímetros" />
+        <prueba id="TRR" nombre="Tiempo de reacción" valor_max="200" unidad="milisegundos" />
+    </pruebas>
+    <aspirantes>
+        <aspirante dni="12345678A" nombre="Juan Pérez" fecha_nacimiento="1985-05-10" />
+        <aspirante dni="87654321B" nombre="María López" fecha_nacimiento="1990-09-22" />
+        <aspirante dni="13579246C" nombre="Carlos García" fecha_nacimiento="1988-03-15" telefono="123456789" />
+        <aspirante dni="64285739D" nombre="Ana Martínez" fecha_nacimiento="1992-11-30" />
+        <aspirante dni="98765432E" nombre="Luis Rodríguez" fecha_nacimiento="1983-07-07" telefono="987654321" />
+    </aspirantes>
+    <resultados>
+        <resultado prueba_id="FDB" aspirante_dni="12345678A" valor="25" realiza="2024-03-06T08:30:00" />
+        <resultado prueba_id="C15" aspirante_dni="12345678A">
+            <observaciones>No se pudo realizar debido a una condición médica previa.</observaciones>
+        </resultado>
+        <resultado prueba_id="SVE" aspirante_dni="12345678A">
+            <observaciones>Exento debido a una cirugía reciente en la rodilla.</observaciones>
+        </resultado>
+        <resultado prueba_id="FDB" aspirante_dni="87654321B" valor="15" realiza="2024-03-06T11:00:00" />
+        <resultado prueba_id="C15" aspirante_dni="87654321B" valor="390" realiza="2024-03-06T11:30:00" />
+        <resultado prueba_id="SVE" aspirante_dni="87654321B">
+            <observaciones>Exento debido a una condición médica.</observaciones>
+        </resultado>
+        <resultado prueba_id="TRR" aspirante_dni="98765432E" valor="180" realiza="2024-03-06T13:00:00" />
+        <resultado prueba_id="FDB" aspirante_dni="13579246C" valor="22" realiza="2024-03-06T08:45:00" />
+        <resultado prueba_id="C15" aspirante_dni="13579246C" valor="415" realiza="2024-03-06T09:15:00" />
+        <resultado prueba_id="SVE" aspirante_dni="13579246C" valor="53" realiza="2024-03-06T09:45:00" />
+        <resultado prueba_id="EST" aspirante_dni="13579246C" valor="167" realiza="2024-03-06T10:15:00" />
+        <resultado prueba_id="TRR" aspirante_dni="13579246C" valor="190" realiza="2024-03-06T10:45:00" />
+    </resultados>
+</pruebas_aptitud>
